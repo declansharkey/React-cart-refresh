@@ -8,6 +8,7 @@ import sampleProducts from '../sample-products';
 
 class App extends React.Component {
 
+    //this is a constructor used to set up state
     constructor() {
         super();
         this.removeItem = this.removeItem.bind(this);
@@ -22,9 +23,10 @@ class App extends React.Component {
         const products = { ...this.state.products };
         delete products[key];
         this.setState({ products });
-        console.log("pressed");
     }
 
+
+    //render out the components I made
     render() {
         return (
             <div className="cart-main">
