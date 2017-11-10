@@ -1,7 +1,7 @@
 import React from 'react';
 import {formatPrice} from '../helpers';
-
 class Products extends React.Component {
+
     render() {
         const {details} = this.props;
         return (
@@ -10,6 +10,7 @@ class Products extends React.Component {
                 <h4>{details.name}</h4>
                 <span className="item-price">{formatPrice(details.price)}</span>
                 <span className="item-quantity">Quantity: {details.quantity}</span>
+                <span onClick={() => this.props.removeItem()} className="remove-item">Remove</span>
             </div>
         )
     }
