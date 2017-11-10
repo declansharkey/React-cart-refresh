@@ -1,7 +1,7 @@
 import React from 'react';
 import Products from '../components/Products'
 import sampleProducts from '../sample-products';
-
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
 class OrderSummary extends React.Component {
 
@@ -29,13 +29,13 @@ class OrderSummary extends React.Component {
                     <h3>Order Summary</h3>
                     <span className="change-order">Change</span>
                 </div>
-                <div className="my-orders-wrapper">
+                <CSSTransitionGroup className="my-orders-wrapper" component="div" transitionName="delete" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
                     {
                         Object
                             .keys(this.state.products)
                             .map(key => <Products removeItem={this.removeItem} key={key} id={key} details={this.state.products[key]} />)
                     }
-                </div>
+                </CSSTransitionGroup>
             </section>
         )
     }

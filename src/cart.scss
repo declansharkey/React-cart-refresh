@@ -382,8 +382,9 @@ body{
                 }
                 .my-orders-wrapper{
                     display: grid;
-                    grid-row-gap: 16px;
+                    margin-bottom: 16px;
                     margin-top: 16px;
+                    overflow: hidden;
                     .my-order-grid{
                         display: grid;
                         grid-column-gap: 16px;
@@ -392,6 +393,7 @@ body{
                         grid-auto-rows: auto; 
                         border-bottom: 1px solid rgba(66,66,66,0.2);
                         padding-bottom: 16px;
+                        padding-top: 16px;
                         &:last-child{
                             border: 0;
                         }
@@ -416,6 +418,16 @@ body{
                             grid-column: 2 / 3;
                             align-self: center;
                         }
+
+                        .remove-item{
+                            grid-row: 3;
+                            font-size: 13px;
+                            color: $link-color;
+                            justify-self: start;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
                     }
                 }
             }
@@ -438,6 +450,27 @@ body{
         }
     }
 }
+
+
+//animations
+
+.delete-leave{
+    transition: all 0.5s;
+    transform: translateX(0);
+    max-height: 90px;
+    padding-bottom: 16px!important;
+    padding-top: 16px!important;
+    
+        &.delete-leave-active{
+            transform: translateX(-120%);
+            border-bottom: none!important;
+            max-height: 0;
+            padding-bottom: 0!important;
+            padding-top: 0!important;
+            
+        }
+}
+
 
 // Media Queries
 @media (min-width: 768px) {
