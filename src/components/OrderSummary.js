@@ -33,7 +33,7 @@ class OrderSummary extends React.Component {
                     {
                         Object
                             .keys(this.state.products)
-                            .map(key => <Products removeItem={this.removeItem} key={key} details={this.state.products[key]} />)
+                            .map(key => <Products removeItem={this.removeItem} key={key} id={key} details={this.state.products[key]} />)
                     }
                 </div>
             </section>
