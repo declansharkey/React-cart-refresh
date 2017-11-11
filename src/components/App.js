@@ -33,7 +33,7 @@ class App extends React.Component {
                 <Title page="Delivery &amp; Payment Methods" />
                 <DeliveryMethods />
                 <PaymentMethods />
-                <OrderTotal  />
+                <OrderTotal  currentState={this.state.products}/>
                 <OrderSummary products={this.state.products} removeItem={this.removeItem}/>
             </div>
         )
