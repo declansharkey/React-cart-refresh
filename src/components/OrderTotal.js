@@ -4,8 +4,17 @@ import OrderTotalSum from './OrderTotalSum';
 class OrderTotal extends React.Component {
 
     getTotal(){
-        const count = Object.keys(this.props.currentState).values;
-        return count;
+        var obj = this.props.currentState
+        var total = 0;
+        var keys = Object.keys(obj);
+
+        keys.forEach((key) => {
+            console.log(obj[key]);
+            
+            total += obj[key].price;
+          })
+
+          return total;
     }
 
     render() {

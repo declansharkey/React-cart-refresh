@@ -13,7 +13,7 @@ class OrderTotalSum extends React.Component {
                 <p className="sales-tax-value">$3.00</p>
                 <div className="total-section">
                     <p className="grand-total">Total</p>
-                    <p className="grand-total-value">$25.00</p>
+                    <p className="grand-total-value">{this.props.getTotal}</p>
                 </div>
             </div>
 
