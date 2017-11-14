@@ -9,7 +9,7 @@ class OrderTotal extends React.Component {
         var keys = Object.keys(obj);
 
         keys.forEach((key) => {
-            console.log(obj[key]);
+           // console.log(obj[key]);
             
             total += obj[key].price;
           })
@@ -22,7 +22,7 @@ class OrderTotal extends React.Component {
             <section className="order-total-wrapper">
                 <div className="order-container">
                     <h3>Order Total</h3>
-                    <OrderTotalSum getTotal={this.getTotal}/>
+                    <OrderTotalSum getTotal={this.getTotal()}/>
                 </div>
                 <div className="continue-btn">
                     <button className="btn btn-primary">Continue to order review</button>

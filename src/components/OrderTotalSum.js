@@ -1,4 +1,5 @@
 import React from 'react';
+import {formatPrice} from '../helpers';
 
 class OrderTotalSum extends React.Component {
     render() {
@@ -8,12 +9,10 @@ class OrderTotalSum extends React.Component {
                     <span className="brackets"> (Online Payment Only)</span>
                 </p>
                 <p className="subtotal-name">Subtotal</p>
-                <p className="subtotal-value">$22.00</p>
-                <p className="sales-tax-text">Sales Tax</p>
-                <p className="sales-tax-value">$3.00</p>
+                <p className="subtotal-value">{formatPrice(this.props.getTotal)}</p>
                 <div className="total-section">
                     <p className="grand-total">Total</p>
-                    <p className="grand-total-value">{this.props.getTotal}</p>
+                    <p className="grand-total-value">{formatPrice(this.props.getTotal)}</p>
                 </div>
             </div>
 
