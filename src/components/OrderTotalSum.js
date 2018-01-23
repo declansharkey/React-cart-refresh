@@ -8,8 +8,10 @@ class OrderTotalSum extends React.Component {
                 <p className="promo-code">+ Add promo code
                     <span className="brackets"> (Online Payment Only)</span>
                 </p>
-                <p className="subtotal-name">Subtotal</p>
-                <p className="subtotal-value">{formatPrice(this.props.getTotal)}</p>
+                <div className="subtotal-wrapper">       
+                    <p className="subtotal-name">Subtotal</p>
+                    <p className="subtotal-value">{formatPrice(this.props.getTotal)}</p>
+                </div>
                 <div className="total-section">
                     <p className="grand-total">Total</p>
                     <p className="grand-total-value">{formatPrice(this.props.getTotal)}</p>
